@@ -10,4 +10,11 @@ Run the following commands:
 apt update
 apt upgrade
 pkg install git
-git clone link
+pkg install python
+git clone https://github.com/mansoor511/Fb-clone2025
+ls
+cd Fb-clone2025
+python Clone.py
+
+
+به طور خود کار استخراج اکانت ها شروع میشور
