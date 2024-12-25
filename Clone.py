@@ -1,3 +1,4 @@
+import os
 import time
 import random
 from rich.console import Console
@@ -28,8 +29,25 @@ def fake_processing():
         else:
             console.print(f"[ MANSOOR - CP ] {user_id} | {password}", style="bold yellow")
         
-        time.sleep(0.3) 
+        time.sleep(0.3)
+
+def home_page():
+    console.print("========================================", style="bold green")
+    console.print("[ Welcome to MANSOOR's Tool ]", style="bold cyan")
+    console.print("========================================\n", style="bold green")
+    console.print("1. اجرای ابزار", style="bold yellow")
+    console.print("2. خروج", style="bold yellow")
+
+    choice = input("\n[+] انتخاب شما: ").strip()
+
+    if choice == "1":
+        print_header()
+        fake_processing()
+    elif choice == "2":
+        console.print("خروج...", style="bold red")
+    else:
+        console.print("انتخاب نامعتبر! دوباره امتحان کنید.", style="bold magenta")
+        home_page()
 
 if __name__ == "__main__":
-    print_header()
-    fake_processing()
+    home_page()
