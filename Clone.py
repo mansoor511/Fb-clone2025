@@ -18,12 +18,6 @@ def fake_processing():
     console.print("[!] IF NO RESULT USE AIRPLANE MODE\n", style="bold magenta")
     time.sleep(1)
 
-    
-    main_id = "61571184358295"
-    main_password = "92017507"
-    console.print(f"[ MANSOOR - OK ] {main_id} | {main_password}", style="bold red")
-    time.sleep(0.5)
-
     while True:
         status = random.choice(["OK", "CP"])
 
@@ -31,7 +25,7 @@ def fake_processing():
         random_id = str(random.randint(10000000000000, 99999999999999))  
 
         
-        random_password = str(random.randint(10000000, 99999999))  
+        random_password = str(random.randint(10000000, 99999999)) 
 
         if status == "OK":
             console.print(f"[ MANSOOR - OK ] {random_id} | {random_password}", style="bold green")
